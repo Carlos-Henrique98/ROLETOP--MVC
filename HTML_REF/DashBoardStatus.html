@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Logo/logo.png" type="image/x-png" />
+    <link rel="stylesheet" type="text/css" href="CSS/Style_dashboradStatus.css">
+    <title>DASHBOARD</title>
+    <link href="css/style-secondary-pages.css" rel="stylesheet" type="text/css">
+    <link href="css/style-dashboard.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script> type = "text/javascript" >
+            $(document).ready(function () {
+                $('.toggle span').click(function () {
+                    $('ul').toggleClass('active')
+                })
+            })
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!-- <nav>
+            <div class="section-container">
+                <ul>
+                    <li class="bt-mobile-menu">
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </a>
+                    </li>
+
+                    <li class="bt-common-menu">
+                        <a onclick="toggleMobileMenu()" href="index.html" class="active">HOME</a>
+                    </li>
+
+                    <li class="bt-common-menu">
+                        <a onclick="toggleMobileMenu()" href="cadastroCliente.html">CLIENTE</a>
+                    </li>
+
+                    <li class="bt-common-menu">
+                        <a id="bt-login" href="login.html">LOGIN</a>
+                    </li>
+
+                    <li class="bt-common-menu">
+                        <a id="bt-criar-conta" href="ROLETOP - CONTA.html">CONTA</a>
+                    </li>
+
+                    <li class="bt-common-menu">
+                        <a id="bt-dashboard" href="Dashboard.html">DASHBOARD</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+
+        <nav>
+            <div class="toggle">
+                <span>MENU</span>
+            </div>
+            <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">CADASTRO</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">DASHBOARD</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="logo-roletop">
+            <div class="tamanho-logo">
+                <img src="Logo/logo.png" alt="">
+            </div>
+            <div class="dashboard">
+                <strong>
+                    <p>DASHBOARD</p>
+                </strong>
+            </div>
+
+            <div class="fundo-transparente"></div>
+
+            <div class="caixas">
+                <div class="caixa-emcimaR">
+                    <div class="caixa-vermelha">
+                        <div class="caixa-preta">
+                            <p>EVENTOS</p>
+                        </div>
+                        <div class="status">
+                            <b>
+                                <p>RECUSADOS</p>
+                            </b>
+                        </div>
+                        <div class="quantidade-pedidos">
+                            <strong>
+                                <p>1</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa-emcimaY">
+                    <div class="caixa-amarela">
+                        <div class="caixa-preta">
+                            <p>EVENTOS</p>
+                        </div>
+                        <div class="status">
+                            <b>
+                                <p>PENDENTES</p>
+                            </b>
+                        </div>
+                        <div class="quantidade-pedidos">
+                            <strong>
+                                <p>5</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa-emcimaG">
+                    <div class="caixa-verde">
+                        <div class="caixa-preta">
+                            <p>EVENTOS</p>
+                        </div>
+                        <div class="status">
+                            <b>
+                                <p>ACEITOS</p>
+                            </b>
+                        </div>
+                        <div class="quantidade-pedidos">
+                            <strong>
+                                <p>10</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fundo-image">
+
+                <section id="lista-eventos">
+                    <div class="fundo-atras">
+                        <strong>
+                            <h3>HISTÓRICO DE EVENTOS</h3>
+                        </strong>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">NOME</th>
+                                <th rowspan="2">EMAIL</th>
+                                <th colspan="2" rowspan="2">EVENTOS</th>
+                                <th colspan="2" rowspan="2">AGENDADO</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><b>João Feijão</b></td>
+                                <td><b>JoaoFeijao@gmail.com</b></td>
+                                <td><strong>CASAMENTO</strong></td>
+                                <td></td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <!-- <td><a href="#"><i class="fas fa-times"></i></a></td> -->
+                                <td><a href="#"><i class="fas fa-times" arial-hidden="true"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><b>Ronan Donalds</b></td>
+                                <td><b>RonanD@gmail.com</b></td>
+                                <td><strong>BALADA</strong></td>
+                                <td></td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <!-- <td><a href="#"><i class="fas fa-times"></i></a></td> -->
+                                <td><a href="#"><i class="fas fa-times" arial-hidden="true"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><b>José Mineiro</b></td>
+                                <td><b>JoseM@gmail.com</b></td>
+                                <td><strong>ANIVERSÁRIO</strong></td>
+                                <td></td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <td><a href="#"><i class="fas fa-times" arial-hidden="true"></i></a></td>
+                            </tr>
+
+                            <tr>
+                                <td><b>Mineiro Alves</b></td>
+                                <td><b>MineiroQueijo@gmail.com</b></td>
+                                <td><strong>SHOW DE ROCK</strong></td>
+                                <td></td>
+                                <td><a href="#"><i class="fas fa-check"></i></a></td>
+                                <td><a href="#"><i class="fas fa-times" arial-hidden="true"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+
+    </script>
+    </main>
+</body>
+
+</html>

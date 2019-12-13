@@ -1,0 +1,48 @@
+<main>
+        <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")' class="login-form">
+            <div class="capa">
+
+                <div class="posicao-Cadastro">
+                    <h1>Cadastro</h1>   
+                </div>
+
+                <div class="txtb">
+                    <input id="nome" type="text" maxlength="30" minlength="3" name="nome">
+                    <span data-placeholder="Nome"></span>
+                </div>
+
+                <div class="txtb">
+                    <input id="email" type="email" maxlength="30" minlength="3" name="email">
+                    <span data-placeholder="Email"></span>
+                </div>
+
+                <div class="txtb">
+                    <input id="senha" type="senha" maxlength="20" minlength="6" name="senha">
+                    <span data-placeholder="Senha"></span>
+                </div>
+
+                <div class="txtb">
+                    <input id="cpf" type="cpf" maxlength="11" minlength="11" name="cpf">
+                    <span data-placeholder="CPF"></span>
+                </div>
+
+                <div class="txtb">
+                    <input id="cnpj" type="cnpj" maxlength="20" minlength="3" name="cnpj">
+                    <span data-placeholder="CNPJ"></span>
+                </div>
+
+                <input type="submit" class="logbtn" value="Cadastre">
+
+                <div class="bottom-text">
+                    Faça o Login<a href='@Url.Action("Login","Login")'> LOGIN</a>
+                </div>
+
+            </div>
+        </form>
+</main>
+
+
+
+
+
+

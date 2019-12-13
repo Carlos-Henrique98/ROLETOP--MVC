@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Logo/logo.png" type="image/x-png" />
+    <link rel="stylesheet" type="text/css" href="CSS/Stylee_login.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf"></script>
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <input type="checkbox" id="chec">
+    <label for="chec">
+        <img src="Rosto/icone3.png">
+    </label>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="cadastroCliente.html">CLIENTE</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="">CONTA</a></li>
+            <li><a href="Dashboard.html">DASHBOARD</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="fundo">
+
+            <form action="index.html" class="login-form">
+
+                <h1>Login</h1>
+
+                <div class="txtb">
+                    <input type="text">
+                    <span data-placeholder="Nome"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha">
+                    <span data-placeholder="Senha"></span>
+                </div>
+
+                <input type="submit" class="logbtn" value="Login">
+
+                <div class="bottom-text1">
+                    Não tem uma conta?<a href="#"> Faça uma</a>
+                </div>
+
+            </form>
+
+    </main>
+    </div>
+
+    <script type="text/javascript">
+        $(".txtb input").on("focus", function () {
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur", function () {
+            if ($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+    </script>
+
+</body>
+
+</html>

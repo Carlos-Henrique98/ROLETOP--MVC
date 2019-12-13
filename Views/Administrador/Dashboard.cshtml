@@ -1,0 +1,101 @@
+@model ROLETOP.ViewModels.DashboardViewModel
+
+<main>
+    <div class="logo-roletop">
+        <div class="tamanho-logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="dashboard">
+            <strong>
+                <p>DASHBOARD</p>
+            </strong>
+        </div>
+
+        <div class="fundo-transparente"></div>
+
+        <div class="caixas">
+            <div class="caixa-emcimaR">
+                <div class="caixa-vermelha">
+                    <div class="caixa-preta">
+                        <p>EVENTOS</p>
+                    </div>
+                    <div class="status">
+                        <b>
+                            <p>REPROVADO</p>
+                            <p>@Model.AgendamentoReprovado</p>
+                        </b>
+                    </div>
+                    <div class="quantidade-pedidos">
+                    </div>
+                </div>
+            </div>
+
+            <div class="caixa-emcimaY">
+                <div class="caixa-amarela">
+                    <div class="caixa-preta">
+                        <p>EVENTOS</p>
+                    </div>
+                    <div class="status">
+                        <b>
+                            <p>PENDENTES</p>
+                            <p>@Model.AgendamentoPendente</p>
+                        </b>
+                    </div>
+                    <div class="quantidade-pedidos">
+                    </div>
+                </div>
+            </div>
+
+            <div class="caixa-emcimaG">
+                <div class="caixa-verde">
+                    <div class="caixa-preta">
+                        <p>EVENTOS</p>
+                    </div>
+                    <div class="status">
+                        <b>
+                            <p>ACEITOS</p>
+                            <p>@Model.AgendamentoAceitos</p>
+                        </b>
+                    </div>
+                    <div class="quantidade-pedidos">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+            <div class="fundo-image">
+
+                <section id="lista-eventos">
+                    <div class="fundo-atras">
+                        <strong>
+                            <h3>HISTÓRICO DE EVENTOS</h3>
+                            <h3>ULTIMA ATUALIZAÇÃO EM: @DateTime.Now</h3>
+                        </strong>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">NOME</th>
+                                <th rowspan="2">EMAIL</th>
+                                <th colspan="1" rowspan="1">EVENTOS</th>
+                                <th colspan="2" rowspan="2">AGENDADO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach(var agenda in Model.Agendamento)
+                           {
+                               <tr>
+                                    <td>@agenda.Cliente.Nome</td>
+                                    <td>@agenda.Cliente.Email</td>
+                                    <td>@agenda.Evento.NomeEvento</td>
+                                    <td><a href='@Url.Action("Aceitar","Agendamento", new {id = @agenda.Id})'><i class="fas fa-check"></i></a></td>
+                                    <td><a href='@Url.Action("Reprovar","Agendamento", new {id = @agenda.Id})'><i class="fas fa-times"></i></a></td>
+                               </tr>
+                           }
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+    </div>
+</main>

@@ -1,0 +1,178 @@
+/*********************************************
+
+                  NAVEGADOR
+
+**********************************************/
+
+/* *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+body{
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+nav {
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    list-style-type: none;
+}
+
+nav ul > li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul > li > a {
+    padding: 0.4em;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    background-color:#192a56;
+    color: #fff;
+}
+
+@media (max-width: 625px)
+{
+    nav #bt-mobile-menu{
+        display: block;
+    }
+    
+    nav .bt-common-menu{
+        display: none;
+    }
+    
+    nav .bt-common-menu.active{
+        display:block;
+    }
+    
+    nav ul.mobile-mode{
+        display:flex;
+        flex-direction: column;
+    }
+} */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+nav
+{
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+    background: #000000;
+    box-sizing: border-box;
+}
+
+nav ul
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a
+{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    font-weight:bold;
+
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    columns: #000000;
+    background:#092f8f;
+}
+
+nav li a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toggle
+{
+    width: 100%;
+    background: #000000;
+    padding: 20px;
+    color:#fff;
+    box-sizing: border-box;
+    text-align:right;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toggle span
+{
+    color: #fff;
+    background: #192a56;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 767px)
+{
+    .toggle
+    {
+    display: block;
+    }
+    nav
+    {
+        padding: 0;
+    }
+    nav ul
+    {
+        float: none;
+        text-align: center;
+        display: none;
+    }
+
+    nav ul.active
+    {
+        display: block;
+    }
+
+    nav ul li 
+    {
+        display: block;
+    }
+}
+
+

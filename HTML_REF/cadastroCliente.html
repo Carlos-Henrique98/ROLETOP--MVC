@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Logo/logo.png" type="image/x-png" />
+    <link rel="stylesheet" type="text/css" href="CSS/Style_cadastro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf"></script>
+    <title>CADASTRO</title>
+</head>
+
+<body>
+    <input type="checkbox" id="chec">
+    <label for="chec">
+        <img src="Rosto/icone3.png">
+    </label>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="cadastroCliente.html">CLIENTE</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="">CONTA</a></li>
+            <li><a href="Dashboard.html">DASHBOARD</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form action="index.html" class="login-form">
+            <div class="capa">
+
+                <h1>Cadastro</h1>
+
+                <div class="txtb">
+                    <input type="text">
+                    <span data-placeholder="Nome"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha">
+                    <span data-placeholder="Email"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha">
+                    <span data-placeholder="Senha"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha">
+                    <span data-placeholder="CPF"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha">
+                    <span data-placeholder="CNPJ"></span>
+                </div>
+
+
+
+                <input type="submit" class="logbtn" value="Cadastre">
+
+                <div class="bottom-text">
+                    Não tem cadastro?<a href="#"> Faça um</a>
+                </div>
+
+            </div>
+        </form>
+    </main>
+
+    <script type="text/javascript">
+        $(".txtb input").on("focus", function () {
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur", function () {
+            if ($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+/************************************
+
+                MENU
+
+************************************/
+
+
+body{
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+nav {
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    list-style-type: none;
+}
+
+nav ul > li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul > li > a {
+    padding: 0.4em;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    background-color:#192a56;
+    color: #fff;
+}
+
+@media (max-width: 625px)
+{
+    nav #bt-mobile-menu{
+        display: block;
+    }
+    
+    nav .bt-common-menu{
+        display: none;
+    }
+    
+    nav .bt-common-menu.active{
+        display:block;
+    }
+    
+    nav ul.mobile-mode{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+/*
+
+        FIM
+
+*/
+
+/*********************************************
+
+                CAPA / LOGO
+
+*********************************************/
+/*POSIÇÃO - LOGO*/
+.logo{
+    padding:70px;
+    padding-left:10px;
+    font-weight: bold;
+}
+
+.posicao-balada{
+    padding:180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/*CAPA*/
+.capa{
+    background-image:url(../galeria/imagem1.jpg);
+    /* background-image: url(../Eventos/baladas.jpg);
+    background-image:url(../Eventos/capa1.jpg);
+    background-image:url(../Eventos/CAPA8.jpg); */
+    width: 100%;
+    height: 920px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+@media screen and (max-width: 400px){
+    .capa {
+        width: 100%;
+    }
+}
+
+.middle{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    cursor:pointer;
+}
+
+.text{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    color: white;
+}
+
+.text::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width:0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.container::before{
+    content:"";
+    width: 0%;
+    height:100%;
+    position: absolute;
+    background-image: linear-gradient(120deg,#1B1464,#000000);
+    right:0;
+    top: 0;
+}
+
+.container:hover .text::before,
+.container:hover::before{
+    width: 100%;
+
+}
+
+/*****************************************
+
+                FEEDBACK
+
+*****************************************/
+
+
+.testimonials{
+    padding: 40px 0;
+    background: #f1f1f1;
+    color: #434343;
+    text-align: center;
+}
+
+.inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.border{
+    width: 160px;
+    height: 5px;
+    background: #6ab04c;
+    margin: 26px auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.col p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.testimonial{
+    background-image: linear-gradient(120deg,#1B1464,#000000);
+
+    padding: 30px;
+}
+
+.testimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.testimonial p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stars{
+    color: #6ab04c;
+    margin-bottom: 20px;
+}
+
+.inner h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 20px;
+}
+
+.inner-width h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000000;
+    font-size:20px;
+}
+
+.container-preto{
+    background-color: #000000;
+    width:100%;
+    height: 10px;
+}
+
+@media screen and (max-width: 960px){
+.col{
+    flex: 100%;
+    max-width: 80%;
+}
+}
+
+@media screen and (max-width: 600px){
+.col{
+    flex: 100%;
+    max-width: 100%;
+}
+}
+
+/*********************************************
+
+                    FIM
+
+********************************************/
+
+
+
+/********************************************
+
+                AVALIAÇÃO
+
+********************************************/
+
+.inner-width{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-section{
+    width: 100%;
+    background: #f1f1f1;
+    padding: 40px 0;
+}
+
+.inner-width{
+    max-width: 1000px;
+    overflow: hidden;
+    padding:  0 20px;
+    margin: auto;
+}
+
+.about-section h1{
+    text-align:center;
+}
+
+.border{
+    width:100px;
+    height: 3px;
+    background:#1B1464;
+    margin:40px auto;
+}
+
+.about-section-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-section-col{
+    flex: 50%;
+}
+
+.about{
+    padding-right: 30px;
+}
+
+.about p{
+    text-align: justify;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about a{
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #1B1464;
+    border-radius: 20px;
+    padding: 8px 40px;
+    transition: 0.4s linear;
+}
+
+.about a:hover{
+    color: #fff;
+    background: #1B1464;
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills{
+    padding-left: 30px;
+}
+
+.skill{
+    margin-bottom: 10px;
+}
+
+.progress{
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 12px;
+
+}
+
+.progress-bar{
+    height: 12px;
+    background:#1B1464;
+}
+
+.p1{
+    width: 90%;
+}
+
+.p2{
+    width:70%;
+}
+
+.p3{
+    width: 50%;
+}
+
+.progress-bar span{
+    float: right;
+    margin-right: 6px;
+    line-height: 13px;
+    color: #fff;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 700px){
+    .about-section-col{
+        flex: 100%;
+        margin: 10px 0;
+    }
+    .about,.skills{
+        padding: 0;
+    }
+    .about{
+        text-align: center;
+    }
+}
+
+/*********************************************
+
+                    FIM
+
+********************************************/
+
+.container-rodape{
+    width: 100%;
+    height: 180px;
+    background-image: linear-gradient(120deg,#1B1464,#000000);
+}
+
+.container-preto1{
+    background-color: #000000;
+    width:100%;
+    height: 40px;
+}
+

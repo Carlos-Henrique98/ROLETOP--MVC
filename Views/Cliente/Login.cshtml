@@ -1,0 +1,25 @@
+<main>
+        <div class="fundo">
+            <form method="POST" action='@Url.Action("Login","Cliente")' class="login-form"  >
+            <h1>Login</h1>
+
+                <div class="txtb">
+                    <input type="text" name="email">
+                    <span data-placeholder="Email"></span>
+                </div>
+
+                <div class="txtb">
+                    <input type="senha" name="senha">
+                    <span data-placeholder="Senha"></span>
+
+                </div>
+
+                <input type="submit" class="logbtn" value="Login">
+
+                <div class="bottom-text1">
+                    Não tem uma conta?<a href='@Url.Action("Index", "Cadastro")'> Faça uma</a>
+                </div>
+            </form>
+            
+        </div>
+</main>

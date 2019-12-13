@@ -1,0 +1,149 @@
+@model ROLETOP.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, init ial-scale=1.0">
+    <title>HOME - ROLETOP</title>
+    <link rel="shortcut icon" href="~/img/logo.png" type="image/x-png" />
+
+    @if(@Model.NomeView.Equals("Home"))
+    {
+    <link rel="stylesheet" type="text/css" href="~/css/style-menu.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style-home.css">
+    }
+     else if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+    {
+           <link rel="stylesheet" type="text/css" href="~/css/style-menulateral.css">
+        <nav>
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="cadastroCliente.html">CLIENTE</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="">CONTA</a></li>
+            <li><a href="Dashboard.html">DASHBOARD</a></li>
+            </ul>
+        </nav>
+        <!-- <li><a asp-controller="Cliente" asp-action="Historico">Historico</a></li>
+        <li id="login"><a asp-controller="Cliente" asp-action="Logoff">Logoff</a></li> -->
+    }
+
+    <!--MENU LATERAL-->
+    <!-- @if(!"Home".Equals(@Model.NomeView))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/style-menulateral.css">
+    } -->
+    
+    @if(@Model.NomeView.Equals("Login"))
+    {
+
+      <link rel="stylesheet" type="text/css" href="~/css/style_login.css">
+      <script type="text/javascript" src="script.js"></script>
+      
+    }
+
+    @if(@Model.NomeView.Equals("Cadastro"))
+    {
+        <!-- <link rel="stylesheet" type="text/css" href="~/css/style-menu-lateral.css"> -->
+        <link rel="stylesheet" type="text/css" href="~/css/style-cadastro.css">
+       <script type="text/javascript" src="script.js"></script>
+
+    }
+
+    @if(@Model.NomeView.Equals("Dashboard"))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/style-dashboardStatus.css">
+    }
+
+    @if(@Model.NomeView.Equals("Evento"))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/style-menu.css">
+        <link rel="stylesheet" type="text/css" href="~/css/style-eventos.css">
+    }
+
+    @if(@Model.NomeView.Equals("Galeria"))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/Stylee_galeria.css">
+    }
+
+    @if(@Model.NomeView.Equals("Elogio"))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/Stylee_avaliacoes.css">
+    }
+
+    @if(@Model.NomeView.Equals("Historico"))
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/Style_historicoDashboard.css">
+        <link rel="stylesheet" type="text/css" href="~/css/style-menu.css">
+    }
+
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <script> type = "text/javascript" >
+            $(document).ready(function () {
+                $('.toggle span').click(function () {
+                    $('ul').toggleClass('active')
+                })
+            })
+    </script>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="script1.js"></script>
+    <header>
+        <nav>
+        
+
+            <div class="toggle">
+                <span>MENU</span>
+            </div>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index" class="active">HOME</a></li>
+                <li><a href='@Url.Action("Index","Cadastro")#CADASTRO'>CADASTRO</a></li>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                <!-- <li><a href='@Url.Action("Index","Login")#LOGIN'>LOGIN</a></li> -->
+                <li class=""><a asp-controller="Cliente" asp-action="Login">LOGIN</a></li>
+
+                }
+              
+            </ul>
+            <div style="clear: both"></div>
+             
+        </nav>
+  
+
+    </header>
+
+    <div class="render-container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+<script type="text/javascript">
+        $(".txtb input").on("focus", function () {
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur", function () {
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+        });
+</script>
+
+</body>
+
+</html>
