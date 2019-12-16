@@ -136,6 +136,8 @@ nav li a{
     text-align: center;
 }
 
+
+
 .dashboard{
     display: flex;
     justify-content: center;
@@ -153,6 +155,20 @@ nav li a{
     justify-content: center;
     justify-content: space-around;
     padding: 60px;
+}
+
+.tamanho-numero p{
+    font-size:30px;
+}
+
+.fundo-atras h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
 }
 
 .caixas p{

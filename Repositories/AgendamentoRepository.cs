@@ -122,7 +122,7 @@ namespace ROLETOP.Repositories
         {
             Cliente c = agendas.Cliente;
             Evento e = agendas.Evento;
-            return $"id={agendas.Id};status_evento={agendas.Status};cliente_nome={c.Nome};tipo_evento={e.NomeEvento};data_evento={e.DataEvento};qtdpessoas={e.QtdPessoas};cliente_nome={c.Nome};cliente_email={c.Email};cliente_senha={c.Senha};cliente_cpf={c.CPF};cliente_cnpj={c.CNPJ};cliente_tipoUsuarios={c.TipoUsuarios};";
+            return $"id={agendas.Id};status_evento={agendas.Status};tipo_evento={e.NomeEvento};data_evento={e.DataEvento};qtdpessoas={e.QtdPessoas};cliente_nome={c.Nome};cliente_email={c.Email};cliente_senha={c.Senha};cliente_cpf={c.CPF};cliente_cnpj={c.CNPJ};cliente_tipoUsuarios={c.TipoUsuarios};";
         }
     }
 }

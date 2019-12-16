@@ -5,30 +5,32 @@
 }
 
 <main>
-    <section id="lista-eventos">
-        <div class="fundo-atras">
-            <strong>
-                <h3>HISTÓRICO DE EVENTOS</h3>
-            </strong>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome Evento</th>
-                    <th>Data Evento</th>
-                    <th>Quantidade de Pessoas</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var agenda in Model.Agendamentos)
-                {
+    <div class="fundo-image">
+        <section id="lista-eventos">
+            <div class="fundo-atras">
+                <strong>
+                    <h3>HISTÓRICO DE EVENTOS</h3>
+                </strong>
+            </div>
+            <table>
+                <thead>
                     <tr>
-                        <td>@agenda.Evento.NomeEvento</td>
-                        <td>@agenda.Evento.DataEvento</td>
-                        <td>@agenda.Evento.QtdPessoas</td>
+                        <th>Nome Evento</th>
+                        <th>Data Evento</th>
+                        <th>Quantidade de Pessoas</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </section>
+                </thead>
+                <tbody>
+                    @foreach(var agenda in Model.Agendamentos)
+                    {
+                        <tr>
+                            <td>@agenda.Evento.NomeEvento</td>
+                            <td>@agenda.Evento.DataEvento</td>
+                            <td>@agenda.Evento.QtdPessoas</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </div>
 </main>
